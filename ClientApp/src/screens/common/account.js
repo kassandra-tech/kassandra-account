@@ -52,6 +52,19 @@ async function createAccountPhantom() {
     return message;
   }
 
+  function togglePassword() {
+    var field = document.getElementById("password-field");
+    var passwordButton = document.getElementById("password-button");
+
+    if (field.type === "password") {
+      field.type = "text";
+      passwordButton.innerText = "HIDE";
+    } else {
+      field.type = "password";
+      passwordButton.innerText = "SHOW";
+    }
+  }
+
   async function logOut() {
     console.log("Logged out");
     localStorage.clear();

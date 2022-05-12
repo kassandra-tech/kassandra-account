@@ -19,6 +19,7 @@
 
       <label class="kassandra-label" name="password-label">Password</label>
       <input type="password" class="kassandra-field" id="password-field" name="password-field" required minlength="8" maxlength="50" size="50">
+      <button id="password-button" class="margin-right-20 gray-text kassandra-field-right" onclick="togglePassword()">SHOW</button>
 
       <label class="kassandra-label" name="confirm-password-label">Confirm Password</label>
       <input type="password" class="kassandra-field" id="confirm-password-field" name="confirm-password-field" required minlength="8" maxlength="50" size="50">
@@ -33,7 +34,7 @@
         <div class="content-margin-top-50">
           <label id="connect-with-phantom-wallet-label">Connect with Phantom Wallet</label>
           <div class="kassandra-button-shadow">
-            <input type="image" id="phantom-button" class="phantom-button" src="../../images/phantom-logo.svg" title="Create Account with Phantom" alt="Create Account with Phantom" onclick="createAccountPhantom()"></button>
+            <input type="image" id="phantom-button" class="phantom-button" src="../../images/phantom-logo.svg" title="Create Account with Phantom" alt="Create Account with Phantom" onclick="createAccountPhantom()"></input>
           </div>
         </div>
       </div>

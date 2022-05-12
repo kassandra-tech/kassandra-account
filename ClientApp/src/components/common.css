@@ -7,6 +7,30 @@
     margin-top: 20px;
 }
 
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.gray-text {
+    position: relative;
+    width: 41px;
+    height: 20px;
+    border: none;
+    background: none;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .kassandra-link {
     width: 128px;
     height: 20px;
@@ -135,6 +159,12 @@
     color: #000000;
     background: #FFFFFF;
     border: 0.5px solid #DDDADA;
+}
+
+.kassandra-field-right {
+    top: 15px;
+    right: 45px;
+    float: right;
 }
 
 /* Label */
