@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log In</title>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+    <link rel="stylesheet" href="../../components/common.css">
+  </head>
+
+  <body>
+    <div class="content-drop-shadow-boarder">
+      <div id="login-label" class="kassandra-title">Log In</div>
+      <div class="content-margin-top-50 kassandra-button-shadow">
+        <div id="welcome-to-kassandra-label" class="kassandra-description">Welcome to Kassandra</div>
+      </div>
+
+      <label class="kassandra-label" name="username-label">Username</label>
+      <input type="text" class="kassandra-field" id="username-field" name="username-field" required minlength="8" maxlength="50" size="50">
+
+      <label class="kassandra-label" name="password-label">Password</label>
+      <input type="password" class="kassandra-field" id="password-field" name="password-field" required minlength="8" maxlength="50" size="50">
+      
+      <div class="center">
+        <button id="submit-button" class="kassandra-action-button">Submit</button>
+        <div class="content-margin-top-50">
+          <label id="connect-with-phantom-wallet-label">Connect with Phantom Wallet</label>
+          <div class="kassandra-button-shadow">
+            <input type="image" id="phantom-button" class="phantom-button" src="/src/images/phantom-logo.svg" title="Create Account with Phantom" alt="Create Account with Phantom" onclick="createAccountPhantom()"></button>
+          </div>
+        </div>
+        <div class="center margin-top-20">
+          <a class="kassandra-link" href="../forgot-password/forgot-password.html">Forgot Password?</a>
+          </div>
+
+        <div class="center margin-top-20">
+        <label name="not-a-kassandra-member-label">Not a Kassandra member? </label>
+        <a class="kassandra-link" href="../create-account/create-account.html">Create Account</a>
+        </div>
+    </div>
+
+  </div>
+
+    <script type="text/javascript" src="../common/account.js"></script>
+    <script type="text/javascript" src="./login.js"></script>
+  </body>
+</html>
