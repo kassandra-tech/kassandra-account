@@ -9,20 +9,24 @@
 
   <body>
     <div class="content-drop-shadow-boarder">
-      <div id="create-account-label" class="kassandra-title">Create Account</div>
+      <h1 id="create-account-label" class="kassandra-title">Create Account</h1>
 
       <label class="kassandra-label" name="username-label">Username</label>
-      <input type="text" class="kassandra-field" id="username-field" name="username-field" required minlength="8" maxlength="50" size="50">
+      <input type="text" class="kassandra-field" id="username-field" name="username-field" onchange="updateUsernameMessage()" required minlength="8" maxlength="50" size="50">
+      <label class="kassandra-message-label" id="username-message-label" name="username-message-label"></label>
 
       <label class="kassandra-label" name="email-label">Email</label>
-      <input type="text" class="kassandra-field" id="email-field" name="email-field" required minlength="8" maxlength="50" size="50">
+      <input type="text" class="kassandra-field" id="email-field" name="email-field" onchange="updateEmailMessage()" required minlength="8" maxlength="50" size="50">
+      <label class="kassandra-message-label" id="email-message-label" name="email-message-label"></label>
 
       <label class="kassandra-label" name="password-label">Password</label>
-      <input type="password" class="kassandra-field" id="password-field" name="password-field" required minlength="8" maxlength="50" size="50">
+      <input type="password" class="kassandra-field" id="password-field" name="password-field" onchange="updatePasswordMessage()" required minlength="8" maxlength="50" size="50">
       <button id="password-button" class="margin-right-20 gray-text kassandra-field-right" onclick="togglePassword()">SHOW</button>
+      <label class="kassandra-message-label" id="password-message-label" name="password-message-label"></label>
 
       <label class="kassandra-label" name="confirm-password-label">Confirm Password</label>
-      <input type="password" class="kassandra-field" id="confirm-password-field" name="confirm-password-field" required minlength="8" maxlength="50" size="50">
+      <input type="password" class="kassandra-field" id="confirm-password-field" name="confirm-password-field" onchange="updatePasswordMessage()" required minlength="8" maxlength="50" size="50">
+      <label class="kassandra-message-label" id="confirm-password-message-label" name="confirm-password-message-label"></label>
 
       <div class="content-left">
         <input type="checkbox" id="terms-and-conditions-checkbox" name="terms-and-conditions-checkbox" value="">

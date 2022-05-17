@@ -110,11 +110,14 @@
 .content-drop-shadow-boarder {
     position: relative;
     width: 520px;
-    height: 785px;
-    left: 500px;
+    height: 900px;
+    left: 33%;
+    top: 60px;
+    margin-top: 65px;
 
     background: #F6F6F6;
     box-shadow: -20px 20px 40px rgba(234, 234, 234, 0.2), 20px -20px 40px rgba(234, 234, 234, 0.2), -20px -20px 40px rgba(255, 255, 255, 0.9), 20px 20px 50px rgba(234, 234, 234, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(234, 234, 234, 0.5);
+    border: 1px solid #DDDADA;
     border-radius: 20px;
 }
 
@@ -123,7 +126,6 @@
     position: relative;
     width: 440px;
     height: 30px;
-    top: 5px;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -146,6 +148,7 @@
     align-items: center;
     padding: 20px;
     gap: 10px;
+    margin-bottom: 40px;
 
     width: 440px;
     height: 70px;
@@ -169,6 +172,7 @@
     align-items: center;
     padding: 20px;
     gap: 10px;
+    margin-bottom: 40px;
 
     width: 440px;
     height: 90px;
@@ -185,14 +189,13 @@
 
 /* Field */
 .kassandra-field {
-    box-sizing: border-box;
-
     position: relative;
     outline: none;
     width: 440px;
     height: 40px;
     left: 30px;
     margin-top: 5px;
+    margin-bottom: 5px;
     
     font-family: 'Roboto';
     font-style: normal;
@@ -200,9 +203,9 @@
     font-size: 16px;
     line-height: 20px;
 
-    color: #000000;
     background: #FFFFFF;
     border: 0.5px solid #DDDADA;
+    border-radius: 5px;
 }
 
 .kassandra-field-right {
@@ -217,57 +220,77 @@
     width: 440px;
     height: 20px;
     left: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 15px;
 
     display: flex;
-    align-items: center;
 
     color: #000000;
 }
 
-/* Member Icon */
-.member-icon {
+.kassandra-message-label {
+    position: relative;
+    width: 440px;
+    height: 20px;
+    left: 30px;
+    margin-bottom: 10px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 4px;
-    gap: 10px;
-    position: absolute;
+    
+    color: #D9534F;
+}
+
+/* Icons */
+.header-icon {
+    position: relative;
+    top: 15px;
+    bottom: 15px;
+    float: left;
+
+    width: 50px;
+    height: 50px;
+    left: 50px;
+
+    margin-right: 81px;
+}
+
+.search-icon {
+    position: relative;
+    top: 20px;
+    bottom: 20px;
+    float: right;
     width: 45px;
     height: 40px;
-    top: 20px;
+
+    padding-right: 30px;
 }
 
 /* Title */
 .kassandra-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 15px 10px 15px 0px;
-    gap: 10px;
-    
     position: relative;
     width: 440px;
     height: 20px;
-    left: 40px;
-    top: 15px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
     
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
-    line-height: 40px;
-    
-    display: flex;
-    align-items: center;
-    
+    font-size: 24px;
+    line-height: 20px; 
     color: #000000;
+
+    text-decoration: none;
 }
-    

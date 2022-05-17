@@ -1,26 +1,50 @@
-async function createAccount(username, email, password, confirmPassword) {
+async function createAccount(username, email, password) {
   let user = new Moralis.User();
 
   try {
-    verifyInformation(username, email, password, confirmPassword);
+    checkStatus(message);
 
-    if (!!message) {
-      alert(message);
-      message = "";
-    }
-    else {
-      console.log(user);
-      user.set("username", username);
-      user.set("password", password);
-      user.set("email", email);
+    user.set("username", username);
+    user.set("password", password);
+    user.set("email", email);
       
-      await user.signUp();    
-      alert("Thank you for creating an account");  
-    }
+    await user.signUp();    
+    window.location.href = "../home/home.html"; 
   }
   catch (error) {
-    alert("Error: " + error.code + " " + error.message);
+    checkStatus(error.message);
   }
 }
-  
-  document.getElementById("create-account-button").onclick = () => createAccount(document.getElementById("username-field").value, document.getElementById("email-field").value, document.getElementById("password-field").value, document.getElementById("confirm-password-field").value);
+
+async function updatePasswordMessage() {
+  var password = document.getElementById("password-field").value;
+  var passwordMessage = document.getElementById("password-message-label");
+  var confirmPassword = document.getElementById("confirm-password-field").value;
+  var confirmPasswordMessage = document.getElementById("confirm-password-message-label");
+
+  passwordMessage.innerHTML = "";
+  confirmPasswordMessage.innerHTML = "";
+
+  if (password.length < 8) {
+    passwordMessage.innerHTML = "Password must be longer than 7 characters";
+  } else if (password !== confirmPassword) {
+    confirmPasswordMessage.innerHTML = "Password and Confirm Password fields do not match";
+  }
+}
+
+async function checkStatus(message) {
+  clearMessages();
+  updateUsernameMessage(message);
+  updateEmailMessage();
+  updatePasswordMessage();
+}
+
+async function clearMessages()
+{
+  document.getElementById("username-message-label").innerHTML = "";
+  document.getElementById("email-message-label").innerHTML = "";
+  document.getElementById("password-message-label").innerHTML = "";
+  document.getElementById("confirm-password-message-label").innerHTML = "";
+}
+
+document.getElementById("create-account-button").onclick = () => createAccount(document.getElementById("username-field").value, document.getElementById("email-field").value, document.getElementById("password-field").value);
