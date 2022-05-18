@@ -4,7 +4,7 @@ async function login(username, password) {
   try {
     await Moralis.User.logIn(username, password);
     checkStatus(message);
-    window.location.href = "../home/home.html";
+    window.location.href = "home.html";
   } catch (error) {
     checkStatus(message);
   }
