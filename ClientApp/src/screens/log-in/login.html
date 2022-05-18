@@ -10,39 +10,39 @@
   <body>
     <div class="kassandra-header" name="header">
       <a href="../home/home.html">
-        <img src="../../images/kassandra-icon.svg" id="kassandra-button" class="header-icon" title="Kassandra Home" alt="Kassandra sphere icon"></img>
+        <img src="../../images/kassandra-icon.svg" id="kassandra-button" class="header-icon" title="Kassandra Home" alt="Kassandra sphere icon. Navigates home when clicked."></img>
       </a>
       <a href="../common/coming-soon.html" class="kassandra-header-link" >Learn</a>
       <a href="../common/coming-soon.html" class="kassandra-header-link" >Markets</a>
       <a href="../common/coming-soon.html" class="kassandra-header-link" >Trade</a>
       <a href="../common/coming-soon.html" class="kassandra-header-link" >Portfolio</a>
       <a href="../common/coming-soon.html" class="kassandra-header-link" >Why Kassandra?</a>
-      <a class="kassandra-header-link-right" href="../create-account/create-account.html">Create Account</a>
-      <a class="kassandra-header-link-right" href="../log-in/login.html">Log In</a>
-      <img id="search-button" class="search-icon" src="../../images/search-icon.svg" title="Kassandra Search" alt="Kassandra search icon"></img>
+      <a href="../create-account/create-account.html" class="kassandra-header-link-right" >Create Account</a>
+      <a href="../log-in/login.html" class="kassandra-header-link-right" >Log In</a>
+      <img src="../../images/search-icon.svg" id="search-button" class="search-icon" title="Search" alt="Search Kassandra"></img>
     </div>
 
-    <div class="content-drop-shadow-boarder">
-      <div id="login-label" class="kassandra-title">Log In</div>
+    <div class="input-container" name="Input Container">
+      <div class="kassandra-title">Log In</div>
       <div class="content-margin-top-50 kassandra-description-shadow">
-        <div id="welcome-to-kassandra-label" class="kassandra-description">Welcome to Kassandra</div>
+        <div class="kassandra-description">Welcome to Kassandra</div>
       </div>
 
-      <label class="kassandra-label" name="username-label">Username</label>
-      <input type="text" class="kassandra-field" id="username-field" name="username-field" onchange="updateUsernameMessage()" required minlength="8" maxlength="50" size="50">
-      <label class="kassandra-message-label" id="username-message-label" name="username-message-label"></label>
+      <label class="kassandra-label">Username</label>
+      <input type="text" id="username-field" class="kassandra-field" onchange="updateUsernameMessage()" required minlength="5" maxlength="50" size="50">
+      <label id="username-message-label" class="kassandra-message-label"></label>
 
-      <label class="kassandra-label" name="password-label">Password</label>
-      <input type="password" class="kassandra-field" id="password-field" name="password-field" onchange="updatePasswordMessage()" required minlength="8" maxlength="50" size="50">
-      <button id="password-button" class="margin-right-20 gray-text kassandra-field-right" onclick="togglePassword()">SHOW</button>
-      <label class="kassandra-message-label" id="password-message-label" name="password-message-label"></label>
+      <label class="kassandra-label">Password</label>
+      <input type="password" id="password-field" class="kassandra-field" onchange="updatePasswordMessage()" required minlength="8" maxlength="50" size="50">
+      <button id="show-password-state-button" class="margin-right-20 gray-text kassandra-field-right" onclick="togglePassword()">SHOW</button>
+      <label id="password-message-label" class="kassandra-message-label"></label>
       
       <div class="center">
         <button id="submit-button" class="kassandra-action-button">Submit</button>
         <div class="content-margin-top-50">
-          <label id="connect-with-phantom-wallet-label">Connect with Phantom Wallet</label>
+          <label>Connect with Phantom Wallet</label>
           <div class="kassandra-button-shadow">
-            <input type="image" id="phantom-button" class="phantom-button" src="../../images/phantom-logo.svg" title="Create Account with Phantom" alt="Create Account with Phantom" onclick="createAccountPhantom()"></input>
+            <input type="image" src="../../images/phantom-logo.svg"  id="phantom-button" class="phantom-button" title="Create Account with Phantom" alt="Create Account with Phantom" onclick="createAccountPhantom()"></input>
           </div>
         </div>
         <div class="center margin-top-20">
@@ -50,8 +50,8 @@
         </div>
 
         <div class="center margin-top-20">
-          <label name="not-a-kassandra-member-label">Not a Kassandra member? </label>
-          <a class="kassandra-link" href="../create-account/create-account.html">Create Account</a>
+          <label>Not a Kassandra member? </label>
+          <a href="../create-account/create-account.html" class="kassandra-link">Create Account</a>
         </div>
       </div>
     </div>
