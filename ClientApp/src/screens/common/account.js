@@ -50,40 +50,31 @@ async function createAccountPhantom() {
   async function updateUsernameMessage(message) {
     var username = document.getElementById("username-field").value;
     var usernameMessage = document.getElementById("username-message-label");
-    var isValid = true;
 
     usernameMessage.innerHTML = "";
 
     if (username.length == 0) {
       usernameMessage.innerHTML = "Username is required to use Kassandra";
-      isValid = false;
     } else if (username.length > 0 && username.length < 5) {
       usernameMessage.innerHTML = "Username must be longer than 4 characters";
-      isValid = false;
     } else if (message == "Account already exists for this username.") {
       usernameMessage.innerHTML = "This username has already been registered";
-      isValid = false;
     }
-
-    return isValid;
   }
 
-  async function updateEmailMessage() {
+  async function updateEmailMessage(message) {
     var email = document.getElementById("email-field").value;
     var emailMessage = document.getElementById("email-message-label");
-    var isValid = true;
 
     emailMessage.innerHTML = "";
 
     if (email.length == 0) {
       emailMessage.innerHTML = "Email address is required";
-      isValid = false;
     } else if (email.length < 6 || email.indexOf("@") == -1 || email.indexOf(".") == -1) {
       emailMessage.innerHTML = "Email address format is invalid";
-      isValid = false;
+    } else if (message == "Account already exists for this email address.") {
+      emailMessage.innerHTML = "Account already exists for this email address";
     }
-
-    return isValid;
   }
 
   async function logOut() {
