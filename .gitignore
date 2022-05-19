@@ -1,0 +1,12 @@
+# Compiled Object folders
+bin
+obj
+packages
+sqlite3
+
+# User files
+*.suo
+*.vs
+
+*feature.cs
+TestResults
