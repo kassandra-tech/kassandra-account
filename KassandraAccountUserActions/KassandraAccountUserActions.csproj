@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Version>1.2.0</Version>
@@ -13,10 +13,6 @@
     <PackageReference Include="FluentAssertions" Version="6.6.0" /> 
     <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" /> 
     <PackageReference Include="SpecRun.SpecFlow" Version="3.9.31" /> 
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Drivers\" />
-    <Folder Include="Designs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\webtest\KassandraWebTest\KassandraWebTest.csproj" />
