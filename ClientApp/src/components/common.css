@@ -15,6 +15,12 @@ a {
     margin-right: 20px;
 }
 
+.coming-soon-image {
+    position: relative;
+    height: 900px;
+    width: 100%;
+}
+
 .gray-text {
     position: relative;
     width: 41px;
