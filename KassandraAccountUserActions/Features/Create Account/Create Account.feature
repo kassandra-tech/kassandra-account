@@ -16,7 +16,27 @@ Scenario: Navigate to create account from log in
 	When the "Create Account" link is clicked
 	Then the "Create Account" screen is displayed
 
-Scenario: Create account with valid input
+@layout
+Scenario: Create Account layout
+
+	Given the user navigates to the "Create Account" screen
+	Then the title is "Create Account"
+	And the "Username" label is displayed
+	And the "Username" field is displayed
+	And the "Email" label is displayed
+	And the "Email" field is displayed
+	And the "Password" label is displayed
+	And the "Password" field is displayed
+	And the "Confirm Password" label is displayed
+	And the "Confirm Password" field is displayed
+	And the "Terms & Conditions" checkbox is displayed
+	And the "Create Account" button is displayed
+	And the "Connect with Phantom Wallet" label is displayed
+	And the "Phantom" button is displayed
+	And the "Already a member?" label is displayed
+	And the "Log In" link is displayed
+
+Scenario: Create account with new user
 Nominal create account with valid input.
 
 	Given the user navigates to the "Create Account" screen

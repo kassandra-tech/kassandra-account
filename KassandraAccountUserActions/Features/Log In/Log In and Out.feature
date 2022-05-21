@@ -16,6 +16,22 @@ Scenario: Navigate to log in from create account
 	When the "Log In" link is clicked
 	Then the "Log In" screen is displayed
 
+@layout
+Scenario: Log In layout
+
+	Given the user navigates to the "Log In" screen
+	Then the title is "Log In"
+	And the "Welcome to Kassandra" label is displayed
+	And the "Username" label is displayed
+	And the "Username" field is displayed
+	And the "Password" label is displayed
+	And the "Password" field is displayed
+	And the "Submit" button is displayed
+	And the "Connect with Phantom Wallet" label is displayed
+	And the "Phantom" button is displayed
+	And the "Not a Kassandra member?" label is displayed
+	And the "Create Account" link is displayed
+
 Scenario: Log in with valid information
 Nominal login in with an existing user and valid information.
 
