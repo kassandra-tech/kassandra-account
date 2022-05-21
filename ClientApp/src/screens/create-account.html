@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Account</title>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+    <link rel="stylesheet" href="../components/common.css">
+  </head>
+
+  <body>
+    <div class="kassandra-header" name="header">
+      <a href="home.html">
+        <img src="../images/kassandra-icon.svg" id="kassandra-button" class="header-icon" title="Kassandra Home" alt="Kassandra sphere icon. Navigates home when clicked."></img>
+      </a>
+      <a href="learn-coming-soon.html" class="kassandra-header-link" >Learn</a>
+      <a href="markets-coming-soon.html" class="kassandra-header-link" >Markets</a>
+      <a href="trade-coming-soon.html" class="kassandra-header-link" >Trade</a>
+      <a href="portfolio-coming-soon.html" class="kassandra-header-link" >Portfolio</a>
+      <a href="coming-soon.html" class="kassandra-header-link" >Why Kassandra?</a>
+      <a href="create-account.html" class="kassandra-header-link-right" >Create Account</a>
+      <a href="login.html" class="kassandra-header-link-right" >Log In</a>
+    </div>
+
+    <div class="input-container">
+      <div id="create-account-label" class="kassandra-title">Create Account</div>
+
+      <label class="kassandra-label">Username</label>
+      <input type="text" id="username-field" class="kassandra-field" onchange="updateUsernameMessage()" required minlength="5" maxlength="50" size="50">
+      <label id="username-message-label" class="kassandra-message-label"></label>
+
+      <label class="kassandra-label">Email</label>
+      <input type="text" id="email-field" class="kassandra-field" onchange="updateEmailMessage()" required minlength="8" maxlength="50" size="50">
+      <label id="email-message-label" class="kassandra-message-label"></label>
+
+      <label class="kassandra-label">Password</label>
+      <input type="password" id="password-field" class="kassandra-field" onchange="updatePasswordMessage()" required minlength="8" maxlength="50" size="50">
+      <button id="show-password-state-button" class="margin-right-20 gray-text kassandra-field-right" onclick="togglePassword()">SHOW</button>
+      <label id="password-message-label" class="kassandra-message-label"></label>
+      
+      <label class="kassandra-label">Confirm Password</label>
+      <input type="password" id="confirm-password-field" class="kassandra-field" onchange="updatePasswordMessage()" required minlength="8" maxlength="50" size="50">
+      <label id="confirm-password-message-label" class="kassandra-message-label"></label>
+
+      <div class="content-left">
+        <input type="checkbox" id="terms-&-conditions-checkbox" value="" onclick="updateAgreeToTermsMessage()">
+        <label >I agree to the
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+        </label>
+        <label id="terms-&-conditions-message-label" class="kassandra-message-label"></label>
+      </div>
+
+      <div class="center">
+        <button id="create-account-button" class="kassandra-action-button">Create Account</button>
+        <div class="content-margin-top-50">
+          <label>Connect with Phantom Wallet</label>
+          <div class="kassandra-button-shadow">
+            <input type="image" id="phantom-button" class="phantom-button" src="../images/phantom-logo.svg" title="Create Account with Phantom" alt="Create Account with Phantom" onclick="createAccountPhantom()"></input>
+          </div>
+        </div>
+      </div>
+
+      <div class="center margin-top-20">
+        <label>Already a member?</label>
+        <a href="login.html">Log In</a>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="common/account.js"></script>
+    <script type="text/javascript" src="common/create-account.js"></script>
+  </body>
+</html>
