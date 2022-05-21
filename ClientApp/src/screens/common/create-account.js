@@ -2,7 +2,7 @@ async function createAccount(username, email, password) {
   let user = new Moralis.User();
 
   try {
-    if (checkStatus(message))
+    if (checkStatus())
     {
       user.set("username", username);
       user.set("password", password);
@@ -14,6 +14,22 @@ async function createAccount(username, email, password) {
   }
   catch (error) {
     checkStatus(error.message);
+  }
+}
+
+async function togglePassword() {
+  var field = document.getElementById("password-field");
+  var confirmField = document.getElementById("confirm-password-field");
+  var passwordButton = document.getElementById("show-password-state-button");
+
+  if (field.type === "password") {
+    field.type = "text";
+    confirmField.type = "text";
+    passwordButton.innerText = "HIDE";
+  } else {
+    field.type = "password";
+    confirmField.type = "password"
+    passwordButton.innerText = "SHOW";
   }
 }
 
@@ -47,7 +63,10 @@ async function updateAgreeToTermsMessage() {
 async function checkStatus(message) {
   clearMessages();
 
-  updateUsernameMessage(message) && updateEmailMessage(message) && updatePasswordMessage() && updateAgreeToTermsMessage();
+  updateUsernameMessage(message);
+  updateEmailMessage(message);
+  updatePasswordMessage();
+  updateAgreeToTermsMessage();
 
   return document.getElementById("username-message-label").innerHTML == "" &&
          document.getElementById("email-message-label").innerHTML == "" &&

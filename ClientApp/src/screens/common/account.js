@@ -7,7 +7,6 @@ Moralis.start({ serverUrl, appId });
 
 async function createAccountPhantom() {
     let user = new Moralis.User();
-    console.log(user.user);
     if (!user.user) {
         user = await Moralis.authenticate({
         type: "sol",
@@ -31,22 +30,6 @@ async function createAccountPhantom() {
     }
   }
 
-  async function togglePassword() {
-    var field = document.getElementById("password-field");
-    var confirmField = document.getElementById("confirm-password-field");
-    var passwordButton = document.getElementById("password-button");
-
-    if (field.type === "password") {
-      field.type = "text";
-      confirmField.type = "text";
-      passwordButton.innerText = "HIDE";
-    } else {
-      field.type = "password";
-      confirmField.type = "password"
-      passwordButton.innerText = "SHOW";
-    }
-  }
-
   async function updateUsernameMessage(message) {
     var username = document.getElementById("username-field").value;
     var usernameMessage = document.getElementById("username-message-label");
@@ -59,6 +42,8 @@ async function createAccountPhantom() {
       usernameMessage.innerHTML = "Username must be longer than 4 characters";
     } else if (message == "Account already exists for this username.") {
       usernameMessage.innerHTML = "This username has already been registered";
+    } else if (message == "Invalid username/password.") {
+      usernameMessage.innerHTML = "Invalid username or password";
     }
   }
 
