@@ -11,7 +11,6 @@ Scenario: Header layout (not signed in)
 	And the "Trade" link is displayed
 	And the "Portfolio" link is displayed
 	And the "Why Kassandra?" link is displayed
-	# And the "Search" button is displayed
 	And the "Log In" link is displayed
 	And the "Create Account" link is displayed
 
@@ -28,7 +27,6 @@ Scenario: Header layout (signed in)
 	And the "Why Kassandra?" link is displayed
 	And the "Favorites" button is displayed
 	And the "Bookmark" button is displayed
-	# And the "Search" button is displayed
 	And the "Member" icon is displayed
 	And the "Sign Out" button is displayed
 

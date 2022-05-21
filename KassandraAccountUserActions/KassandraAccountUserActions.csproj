@@ -15,6 +15,9 @@
     <PackageReference Include="SpecRun.SpecFlow" Version="3.9.31" /> 
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Steps\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\webtest\KassandraWebTest\KassandraWebTest.csproj" />
   </ItemGroup>
 </Project>
