@@ -1,6 +1,4 @@
 async function createAccount(username, email, password) {
-  let user = new Moralis.User();
-
   try {
     if (checkStatus(message))
     {
@@ -8,7 +6,7 @@ async function createAccount(username, email, password) {
       user.set("password", password);
       user.set("email", email);
         
-      await user.signUp();
+      await User.signUp();
       window.location.href = "home.html";
     }
   }

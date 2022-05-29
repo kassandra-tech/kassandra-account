@@ -1,21 +1,23 @@
-const serverUrl = "https://fpzorscs0k7g.usemoralis.com:2053/server";
-const appId = "hx2JcEqU7eY7ADlbBh1Zkfex4piOrOg83IcUM3nE";
+const serverUrl = "https://dqywxuqq3yjn.usemoralis.com:2053/server";
+const appId = "QHKl8mDT6Uaw7D6RMJIzgSpiAqksNBLO0OPLECN5";
 
 let message = "";
 
 Moralis.start({ serverUrl, appId });
 
+var User = Moralis.User.current();
+
 async function createAccountPhantom() {
-    let user = new Moralis.User();
-    console.log(user.user);
-    if (!user.user) {
-        user = await Moralis.authenticate({
+    User = new Moralis.User();
+
+    if (!User.user) {
+        User = await Moralis.authenticate({
         type: "sol",
         signingMessage: "Log in with Phantom",
       })
-        .then(function (user) {
-          console.log("user logged in:", user);
-          console.log(user.get("solAddress"));
+        .then(function (User) {
+          console.log("user logged in:", User);
+          console.log(User.get("solAddress"));
         })
         .catch(function (error) {
           if (error.message == "User rejected the request.") {

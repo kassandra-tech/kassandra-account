@@ -1,5 +1,3 @@
-Moralis.start({ serverUrl, appId });
-
 async function login(username, password) {
   try {
     await Moralis.User.logIn(username, password);
