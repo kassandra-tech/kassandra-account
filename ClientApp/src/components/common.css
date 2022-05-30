@@ -1,0 +1,342 @@
+a {
+    text-decoration: none;
+}
+
+/* Text */
+.center {
+    text-align: center;
+  }
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.gray-text {
+    position: relative;
+    width: 41px;
+    height: 20px;
+    border: none;
+    background: none;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.kassandra-header {
+    height: 80px;
+    width: 100%;
+    min-width: 900px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.kassandra-header-link {
+    position: relative;
+    top: 30px;
+    bottom: 30px;
+    float: left;
+
+    padding-left: 20px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.kassandra-header-link-right {
+    position: relative;
+    top: 30px;
+    bottom: 30px;
+    float: right;
+
+    padding-right: 25px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.kassandra-link {
+    width: 128px;
+    height: 20px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Button */
+.kassandra-button {
+    box-sizing: border-box;
+
+    position: relative;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #3FE3C8;
+    
+    border: 2px solid #3FE3C8;
+    box-shadow: inset 6.15952e-16px 10.0593px 10.0593px rgba(50, 182, 160, 0.5), inset -6.15952e-16px -10.0593px 10.0593px rgba(73, 255, 232, 0.5);
+    border-radius: 40px;
+}
+
+.kassandra-button-shadow {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 440px;
+    height: 45px;
+    left: 40px;
+    margin-top: 20px;
+
+    background: linear-gradient(135deg, #FFFFFF 0%, #EDEDED 100%);
+    box-shadow: -10px 10px 20px rgba(229, 229, 229, 0.2), 10px -10px 20px rgba(229, 229, 229, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(229, 229, 229, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(229, 229, 229, 0.5);
+    border-radius: 40px;
+}
+
+.kassandra-action-button {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 440px;
+    height: 45px;
+    margin-top: 40px;
+
+    background: #3FE3C8;
+    border: 2px solid #3FE3C8;
+    box-shadow: inset 6.15952e-16px 10.0593px 10.0593px rgba(50, 182, 160, 0.5), inset -6.15952e-16px -10.0593px 10.0593px rgba(73, 255, 232, 0.5);
+    border-radius: 40px;
+}
+
+.phantom-button {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+/* Content */
+.content {
+    position: relative;
+    margin-top: 30px;
+}
+
+.content-left {
+    position: relative;
+    left: 30px;
+    margin-top: 30px;
+}
+
+.content-margin-top-50 {
+    position: relative;
+    margin-top: 50px;
+}
+
+.input-container {
+    position: relative;
+    width: 520px;
+    height: 900px;
+    top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 65px;
+
+    background: #F6F6F6;
+    box-shadow: -20px 20px 40px rgba(234, 234, 234, 0.2), 20px -20px 40px rgba(234, 234, 234, 0.2), -20px -20px 40px rgba(255, 255, 255, 0.9), 20px 20px 50px rgba(234, 234, 234, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(234, 234, 234, 0.5);
+    border: 1px solid #DDDADA;
+    border-radius: 20px;
+}
+
+/* Description */
+.kassandra-description {
+    position: relative;
+    width: 440px;
+    height: 30px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 135%;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #000000;
+}
+
+.kassandra-description-shadow {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    width: 440px;
+    height: 70px;
+    left: 30px;
+    
+    background: linear-gradient(135deg, #F2F2F2 0%, #FFFFFF 100%);
+    border: 1px solid rgba(221, 218, 218, 0.3);
+    border-radius: 15px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.kassandra-description-shadow-2-lines {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    width: 440px;
+    height: 90px;
+    left: 30px;
+
+    background: linear-gradient(135deg, #F2F2F2 0%, #FFFFFF 100%);
+    border: 1px solid rgba(221, 218, 218, 0.3);
+    border-radius: 15px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Field */
+.kassandra-field {
+    position: relative;
+    outline: none;
+    width: 440px;
+    height: 40px;
+    left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    background: #FFFFFF;
+    border: 0.5px solid #DDDADA;
+    border-radius: 5px;
+}
+
+.kassandra-field-right {
+    top: 15px;
+    right: 45px;
+    float: right;
+}
+
+/* Label */
+.kassandra-label {
+    position: relative;
+    width: 440px;
+    height: 20px;
+    left: 30px;
+    margin-top: 10px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+
+    display: flex;
+
+    color: #000000;
+}
+
+.kassandra-message-label {
+    position: relative;
+    width: 440px;
+    height: 20px;
+    left: 30px;
+    margin-bottom: 10px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    
+    color: #D9534F;
+}
+
+/* Icons */
+.header-icon {
+    position: relative;
+    top: 15px;
+    bottom: 15px;
+    float: left;
+
+    width: 50px;
+    height: 50px;
+    left: 50px;
+
+    margin-right: 81px;
+}
+
+.search-icon {
+    position: relative;
+    top: 20px;
+    bottom: 20px;
+    float: right;
+    width: 45px;
+    height: 40px;
+
+    padding-right: 30px;
+}
+
+/* Title */
+.kassandra-title {
+    position: relative;
+    width: 440px;
+    height: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px; 
+    color: #000000;
+
+    text-decoration: none;
+}

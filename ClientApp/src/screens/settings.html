@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings</title>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+    <link rel="stylesheet" href="../components/common.css">
+  </head>
+
+  <body onload="UpdateUserValues()">
+    <div class="kassandra-header" name="header">
+      <a href="home.html">
+        <img src="../images/kassandra-icon.svg" id="kassandra-button" class="header-icon" title="Kassandra Home" alt="Kassandra sphere icon. Navigates home when clicked."></img>
+      </a>
+      <a href="coming-soon.html" class="kassandra-header-link" >Learn</a>
+      <a href="coming-soon.html" class="kassandra-header-link" >Markets</a>
+      <a href="coming-soon.html" class="kassandra-header-link" >Trade</a>
+      <a href="coming-soon.html" class="kassandra-header-link" >Portfolio</a>
+      <a href="coming-soon.html" class="kassandra-header-link" >Why Kassandra?</a>
+      <a href="create-account.html" class="kassandra-header-link-right" >Create Account</a>
+      <a href="login.html" class="kassandra-header-link-right" >Log In</a>
+      <img src="../images/search-icon.svg" id="search-button" class="search-icon" title="Search" alt="Search Kassandra"></img>
+    </div>
+
+    <label class="kassandra-label">Markets Filter</label>
+    <input type="text" id="markets-field" class="kassandra-field" onchange="UpdateMarketsFilter()" required minlength="5" maxlength="50" size="50">
+    <label id="markets-message-label" class="kassandra-message-label"></label>
+
+    <label class="kassandra-label">Exchanges Filter</label>
+    <input type="text" id="exchanges-field" class="kassandra-field" onchange="UpdateExchangesFilter()" required minlength="5" maxlength="50" size="50">
+    <label id="exchanges-message-label" class="kassandra-message-label"></label>
+
+    <label class="kassandra-label">Favorite Markets</label>
+    <input type="text" id="favorite-markets-field" class="kassandra-field" onchange="UpdateFavoriteMarketsFilter()" required minlength="5" maxlength="50" size="50">
+    <label id="favorite-markets-message-label" class="kassandra-message-label"></label>
+
+    <script type="text/javascript" src="common/account.js"></script>
+    <script type="text/javascript" src="common/settings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+﻿{
+  "bindingCulture": {
+    "name": "en-us"
+  },
+  "language": {
+    "feature": "en-us"
+  },
+
+  "stepAssemblies": [
+    {
+      "assembly": "KassandraWebTest"
+    }
+  ]
+}
