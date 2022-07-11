@@ -1,0 +1,92 @@
+:host {
+  display: block;
+  height: 100%;
+  .theme-container.dark & {
+    .scroll-container {
+      &:before {
+        background: linear-gradient(180deg, rgba(#F6F6F6, 1) 0%, rgba(#F6F6F6, .9) 25%, rgba(#F6F6F6, 0) 100%);
+      }
+      &:after {
+        background: linear-gradient(0deg, rgba(#F6F6F6, 1) 0%, rgba(#F6F6F6, .9) 25%, rgba(#F6F6F6, 0) 100%);
+      }
+    }
+  }
+  .theme-container.light & {
+    .scroll-container {
+      &:before {
+        background: linear-gradient(180deg, rgba(#F6F6F6, 1) 0%, rgba(#F6F6F6, .9) 25%, rgba(#F6F6F6, 0) 100%);
+      }
+      &:after {
+        background: linear-gradient(0deg, rgba(#F6F6F6, 1) 0%, rgba(#F6F6F6, .9) 25%, rgba(#F6F6F6, 0) 100%);
+      }
+    }
+  }
+}
+
+.scroll-container {
+  position: relative;
+  display: grid;
+  height: 100%;
+  border-radius: inherit;
+  overflow: {
+    x: hidden;
+    y: auto;
+  };
+  @include media('<desktop') {
+    grid-template-rows: 20px 1fr 20px;
+    @media screen and (max-height: 550px) {
+      grid-template-rows: 20px 1fr 15px;
+    }
+    @media screen and (min-height: 905px) {
+      grid-template-rows: 40px 1fr 20px;
+    }
+  }
+  @include media('>=desktop') {
+    grid-template-rows: 20px 1fr 20px;
+    @media screen and (min-height: 885px) {
+      grid-template-rows: 40px 1fr 20px;
+    }
+  }
+  &:before, &:after {
+    pointer-events: none;
+    @supports (position: sticky) {
+      content: '';
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+    }
+  }
+  &:before {
+    @supports (position: sticky) {
+      top: -1px;
+      height: rem-calc(20);
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      @include media('<desktop') {
+        @media screen and (min-height: 905px) {
+          height: rem-calc(40);
+        }
+      }
+      @include media('>=desktop') {
+        @media screen and (min-height: 885px) {
+          height: rem-calc(40);
+        }
+      }
+    }
+  }
+  &:after {
+    @supports (position: sticky) {
+      bottom: -1px;
+      height: rem-calc(20);
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      @include media('<desktop') {
+        @media screen and (max-height: 550px) {
+          height: rem-calc(15);
+        }
+      }
+    }
+  }
+}

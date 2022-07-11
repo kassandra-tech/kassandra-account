@@ -1,0 +1,132 @@
+.form-component {
+  margin-bottom: rem-calc(15);
+  @include media('>=desktop') {
+    @media screen and (min-height: 900px) {
+      margin-bottom: rem-calc(20);
+    }
+  }
+}
+
+.text-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media('<desktop') {
+    flex-flow: column;
+  }
+  @include media('>=desktop') {
+    flex-flow: wrap;
+  }
+  & > * {
+    &:not(:last-child) {
+      @include media('<desktop') {
+        margin-bottom: rem-calc(5);
+      }
+    }
+  }
+  .text {
+    font: 400 #{rem-calc(16)}/1.25 'Roboto', sans-serif;
+    color: #000000;
+  }
+  .btn, .link {
+    color: #005bda;
+  }
+}
+
+.text-item-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: rem-calc(15);
+  @include media('>=desktop') {
+    @media screen and (min-height: 900px) {
+      margin-bottom: rem-calc(20);
+    }
+  }
+  &:before, &:after {
+    content: '';
+    flex: auto;
+    height: rem-calc(1);
+    background-color: rgba(0, 0, 0, 0.05);;
+  }
+  .text {
+    flex: 1;
+    flex-shrink: 0;
+    display: inline-flex;
+    padding: rem-calc(0 7);
+    font: 400 #{rem-calc(16)}/1.25 'Roboto', sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(#000000, .6);
+  }
+}
+
+.recovery-cta-holder {
+  margin-bottom: rem-calc(15);
+  @include media('>=desktop') {
+    @media screen and (min-height: 900px) {
+      margin-bottom: rem-calc(20);
+    }
+  }
+}
+
+.providers-holder {
+  margin-bottom: rem-calc(15);
+  @include media('>=desktop') {
+    @media screen and (min-height: 900px) {
+      margin-bottom: rem-calc(20);
+    }
+  }
+  .btn {
+    width: 100%;
+    padding: rem-calc(4 15);
+    .icon-holder {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: rem-calc(35);
+      height: rem-calc(35);
+      padding: rem-calc(4);
+      margin-right: rem-calc(5);
+      border-radius: 50%;
+      background: linear-gradient(180deg, #534bb1 0%, #551bf9 100%);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.signup-cta-holder {
+  @include media('<desktop') {
+    flex-flow: nowrap;
+  }
+  @include media('>=desktop') {
+    @media screen and (min-height: 1060px) {
+      margin-bottom: rem-calc(30);
+    }
+  }
+  .text {
+    @include media('<desktop') {
+      margin-bottom: 0;
+    }
+  }
+}
+
+kas-card {
+  &.mediumView {
+    :host ::ng-deep & {
+      @include media('>=desktop') {
+        @media screen and (max-height: 865px) {
+          padding: rem-calc(30 40);
+        }
+        @media screen and (max-height: 800px) {
+          padding: rem-calc(20 30);
+          max-width: 500px;
+        }
+      }
+    }
+  }
+}

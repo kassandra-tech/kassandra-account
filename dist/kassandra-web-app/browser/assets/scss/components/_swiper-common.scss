@@ -1,0 +1,235 @@
+swiper {
+  &.swiper-vertical {
+    height: 100%;
+    :host ::ng-deep & {
+      & > .swiper-pagination {
+        top: 50%;
+        left: rem-calc(42.5);
+        flex-flow: column;
+        @include media('<desktop') {
+          display: none;
+        }
+        @include media('>=widescreen') {
+          //left: calc(((100vw - 1440px) * .5) + #{rem-calc(42.5)});
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  &.swiper-horizontal {
+    overflow: initial;
+    display: flex;
+    flex-flow: column;
+    @include media('<desktop') {
+      height: 100%;
+    }
+    :host ::ng-deep & {
+      & > .swiper-pagination {
+        position: relative;
+        flex: 0;
+        order: 2;
+      }
+      .swiper-wrapper {
+        margin-bottom: rem-calc(16);
+      }
+    }
+  }
+  :host ::ng-deep & {
+    .swiper-pagination {
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: transparent; /* For some Androids */
+      .swiper-pagination-bullet {
+        position: relative;
+        display: inline-flex;
+        width: rem-calc(16);
+        height: rem-calc(16);
+        padding: rem-calc(5);
+        border-radius: 50%;
+        transition: all;
+        will-change: opacity, transform;
+        transition: {
+          property: opacity, transform;
+          duration: .3s;
+          timing-function: linear;
+        };
+        &:before, &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: rem-calc(6);
+          height: rem-calc(6);
+          transform: translate(-50%, -50%);
+          border-radius: inherit;
+          will-change: opacity, transform;
+          transition: {
+            property: opacity, transform;
+            duration: .3s;
+            timing-function: linear;
+          };
+        }
+        &:before {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+          background: #005bda;
+        }
+        &:after {
+          z-index: 1;
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(1);
+          background: linear-gradient(151.2deg,
+            #3fe3c8 13.98%,
+            #3ee2c8 22.45%,
+            #3ddfc9 29.34%,
+            #3bd9c9 34.9%,
+            #37d3ca 39.37%,
+            #34cacb 42.99%,
+            #2fc1cd 46%,
+            #2ab6ce 48.64%,
+            #25abcf 51.17%,
+            #209fd1 53.81%,
+            #1a93d3 56.82%,
+            #1587d4 60.44%,
+            #0f7bd6 64.9%,
+            #0a70d7 70.46%,
+            #0565d9 77.36%,
+            #005bda 85.83%);
+        }
+        &:hover {
+          &:before {
+            opacity: 0;
+          }
+          &:after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.6);
+          }
+        }
+        &.swiper-pagination-bullet-active {
+          &:before {
+            opacity: 0;
+          }
+          &:after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.6);
+          }
+        }
+      }
+    }
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+    .swiper-slide {
+      height: auto;
+      opacity: 0;
+      transition: opacity linear .3s;
+      @include media('<desktop') {
+        cursor: grab;
+      }
+      &.swiper-slide-active {
+        opacity: 1;
+      }
+    }
+    .inner-slide-container {
+      height: 100%;
+    }
+  }
+}
+
+.swiper-navigation-holder {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media('>=desktop') {
+    @media screen and (min-height: 750px) {
+      padding-top: rem-calc(10);
+    }
+    @media screen and (min-height: 800px) {
+      padding-top: rem-calc(20);
+    }
+    @media screen and (min-height: 850px) {
+      padding-top: rem-calc(30);
+    }
+    @media screen and (min-height: 900px) {
+      padding-top: rem-calc(35);
+    }
+  }
+  .swiper-navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem-calc(24);
+    height: rem-calc(24);
+    border-radius: 50%;
+    opacity: .3;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+    cursor: pointer;
+    will-change: opacity;
+    transition: opacity linear .3s;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+      box-shadow: -5px 5px 10px rgba(224, 224, 224, 0),
+      5px -5px 10px rgba(224, 224, 224, 0),
+      -5px -5px 10px rgba(255, 255, 255, 0),
+      5px 5px 13px rgba(224, 224, 224, 0),
+      inset 1px 1px 2px rgba(255, 255, 255, 0),
+      inset -1px -1px 2px rgba(224, 224, 224, 0);
+      opacity: 0;
+      will-change: opacity;
+      transition: {
+        property: opacity, box-shadow;
+        duration: .3s;
+        timing-function: linear;
+      };
+    }
+    &:hover {
+      opacity: 1;
+      &:before {
+        opacity: 1;
+        box-shadow: -5px 5px 10px rgba(224, 224, 224, 0.2),
+        5px -5px 10px rgba(224, 224, 224, 0.2),
+        -5px -5px 10px rgba(255, 255, 255, 0.9),
+        5px 5px 13px rgba(224, 224, 224, 0.9),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 2px rgba(224, 224, 224, 0.5);
+      }
+    }
+    &:active {
+      opacity: 1;
+      &:before {
+        opacity: 1;
+        box-shadow: inset 3.53659px 3.53659px 7.07317px rgba(166, 180, 200, 0.75),
+        inset -3.53659px -3.53659px 10.6098px rgba(255, 255, 255, 0.75);
+      }
+    }
+    &:not(:last-child) {
+      margin-right: rem-calc(40);
+    }
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}

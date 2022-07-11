@@ -1,0 +1,93 @@
+.page-container {
+  position: relative;
+  height: 100%;
+  @include media('<desktop') {
+    padding-top: rem-calc(65);
+  }
+  @include media('>=desktop') {
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(35);
+    @media screen and (min-height: 850px) {
+      padding-top: rem-calc(70);
+      padding-bottom: rem-calc(50);
+    }
+    @media screen and (min-height: 860px) {
+      padding-top: rem-calc(80);
+      padding-bottom: rem-calc(50);
+    }
+  }
+}
+
+.content {
+  max-width: 100vw;
+  display: flex;
+  flex-flow: column;
+  & > kas-inner-html, .sub-item {
+    display: block;
+    flex: 0;
+    @include media('>=desktop') {
+      @media screen and (min-height: 750px) {
+        margin-bottom: rem-calc(10);
+      }
+      @media screen and (min-height: 850px) {
+        padding-top: rem-calc(10);
+        margin-bottom: rem-calc(30);
+      }
+    }
+    :host ::ng-deep & {
+      .title-holder {
+        h2 {
+          @include media('>=desktop') {
+            position: relative;
+            @media screen and (max-height: 800px) {
+              white-space: nowrap;
+            }
+          }
+        }
+        sup {
+          @include media('>=desktop') {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(80%, -30%);
+            @media screen and (max-height: 800px) {
+              transform: translate(40%, -35%);
+            }
+          }
+        }
+      }
+    }
+    .title-holder {
+      display: flex;
+    }
+  }
+  .main-item {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.side-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include media('<desktop') {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+  }
+  @include media('>=desktop', '<widescreen') {
+    max-width: 100vw;
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+  @include media('>=widescreen') {
+    max-width: 1440px;
+    padding-left: rem-calc(130);
+    padding-right: rem-calc(130);
+  }
+}
